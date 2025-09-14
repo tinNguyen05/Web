@@ -10,7 +10,8 @@ body {
   font-size: 1.6rem;
   font-family: "poppins", sans-serif;
 }
- /* common */
+
+/* common */
 a {
   text-decoration: none;
 }
@@ -19,49 +20,62 @@ a {
   display: inline-block;
   min-width: 106px;
   line-height: 41px;
-  padding: 0px 12px;
-  color :#ffffff;
+  color: #ffffff;
   font-size: 2rem;
   font-weight: 500;
   text-align: center;
   border-radius: 8px;
   background-color: #3252DF;
 }
-.main-content{
+.btn:hover {
+  background-color: #1e3aa8; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.main-content {
   width: 1142px;
-  max-width: calc(100% - 48px);
+  max-width: calc(100% - 150px);
   margin-left: auto;
   margin-right: auto;
 }
 
 /* header */
 .header {
-  background-color: #ffffff;
+  background: #ffffffce;
   border-bottom: solid 1px;
 }
-.header.fixed {
-  position: sticky;
-  top: -12px;
-  z-index: 100;
+
+.logo {
+  font-size: 2.4rem;  
+  font-weight: 500;    
+  color: #152c5b;      
 }
 
-.header .body{
+.logo span {
+  color: #3252DF;   
+}
+
+.header .body {
   display: flex;
   align-items: center;
-  padding: 15px 0 8px;
+  padding: 15px 0 15px;
 }
 
 .nav {
   margin-left: auto;
 }
-.nav ul{
+
+.nav ul {
   display: flex;
 }
+
 .nav a {
   color: #152c5b;
   font-size: 1.6rem;
   padding: 28px 28px;
 }
+
 .nav a:hover {
   color: #000000;
   text-shadow: 1px 0 0 currentColor;
@@ -71,11 +85,13 @@ a {
   color: #3252DF;
   font-weight: 600;
 }
+
 .header .btn-login {
   min-width: none;
 }
+
 .header .action {
-  margin-left: 45px
+  margin-left: 45px;
 }
 
 /* hero left */
@@ -83,35 +99,39 @@ a {
   padding: 81px;
   background-color: #ffffff;
 }
-.hero .body{
+
+.hero .body {
   display: flex;
 }
-.hero .content-block{
-  width: 40%;
-  
+
+.hero .content-block {
+  width: 37%;
 }
+
 .hero .content-block .heading {
   color: rgba(21, 44, 91, 1);
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 45px;
 }
+
 .hero .content-block .desc {
   color: rgba(176, 176, 176, 1);
   font-weight: 300;
   margin-left: 0px;
-  line-height: 1.7rem;
-  white-space: pre-line;
+  line-height: 2.8rem;
   height: 82px;
+  margin-bottom: 35px;
 }
 
-.hero .action-showmore {
+.hero .btn-showmore {
   color: rgba(255, 255, 255, 1);
   font-weight: 500;
-  margin-top: 35px;
+  margin-bottom: 85px;
+  padding: 0px 30px 0px 30px;
 }
 
-.hero .desc-summary{
+.hero .desc-summary {
   display: flex;
   color: rgba(176, 176, 176, 1);
   font-weight: 300;
@@ -119,35 +139,93 @@ a {
   line-height: 1.5rem;
   padding-bottom: 0px;
 }
-.hero .desc-summary .item{
+
+.hero .desc-summary .item {
   align-items: center;
   margin-right: 40px;
+  line-height: 2.8rem;
 }
+
 /* hero right */
-.hero .media-block .img{
+.hero .media-block .img {
   width: 559px;
   height: 450px;
   object-fit: cover;
 }
-.hero .media-block .hero-shape{
+
+.hero .hero-shape {
   position: absolute;
+  width: 506px;
+  border-radius: 16px;
   bottom: -39px;
-  right: 0px;
-  
-}
-.hero .media-block .hero-banner{
-  position: relative;
-  top : 0px;
+  right: 39px;
 }
 
-.hero .media-block{
-  width: 60%;
+.hero .hero-banner {
   position: relative;
-  padding-left: 150px;
+  width: 520px;
+  height: 410px;
 }
+
+.hero .media-block {
+  position: relative;
+  width: 63%;
+  margin-left: 159px;
+  width: 559px;
+  height: 450px;
+}
+
 .desc-summary strong {
   font-weight: 500;
   color: #000;
 }
 
+.popular {
+  margin-top: 61px;
+}
 
+/* search-box */
+.popular .popular-top {
+  width: 1142px;
+  height: 117px;
+  background: #eaf1ffFF;
+  border-radius: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.popular .btn-popular {
+  cursor: pointer;
+  width: 211px;
+  height: 60px;
+  background: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.6rem;
+  display: flex;             
+  align-items: center;        
+  justify-content: center;   
+  box-shadow: 0 6px 12px rgba(50, 82, 223, 0.3);
+}
+.popular .btn-popular:hover {
+  background-color: #f0f5ff; 
+  box-shadow: 0 6px 12px rgba(50, 82, 223, 0.5);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.popular .frame {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+}
+
+.popular .frame p {
+  font-weight: 600;
+}
+
+.popular .btn-search {
+  padding: 5px 30px 5px 30px;
+  margin-right: 80px;
+}
